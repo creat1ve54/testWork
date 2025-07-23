@@ -92,7 +92,7 @@
           <div class="modal-second-stage__number modal-second-stage__number--active">2</div>
         </div>
         <div class="modal-second-stage__btns">
-          <button @click="$emit('close')" class="btn btn-secondary btn-secondary-l">
+          <button @click="onBack" class="btn btn-secondary btn-secondary-l">
             <span>Назад</span>
           </button>
           <button class="btn btn-primary btn-primary-l" @click="submit">
@@ -112,6 +112,7 @@ import Stars from '@/entities/Stars.vue'
 import Select from '@/entities/Select.vue'
 import ModalSuccess from './ModalSuccess.vue'
 import ModalDanger from './ModalDanger.vue'
+import ModalFirstStage from './ModalFirstStage.vue'
 
 const starWords = [
   {
@@ -155,6 +156,17 @@ const gradeChange = (text) => {
 const formData = reactive({
   text: '',
 })
+
+const onBack = () => {
+  emit('close')
+  const { open, close } = useModal({
+    component: ModalFirstStage,
+    attrs: {
+      onClose: () => close(),
+    },
+  })
+  open()
+}
 
 function submit() {
   v$.value.$validate().then(async (result) => {
