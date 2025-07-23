@@ -1,0 +1,58 @@
+$FFDMSans: 'DM Sans', 'Arial';
+
+//breakpoints
+$laptop: 1439px;
+$table: 1023px;
+$mobile: 767px;
+$mediumMobile: 576px;
+$smallMobile: 374px;
+
+//colors
+$BaseBlue: #4a3aff;
+$BaseBlueBG: #d9dbe9;
+
+$Neutrals800: #170f49;
+$Neutrals700: #514f6e;
+$Neutrals600: #6f6c90;
+$Neutrals500: #a0a3bd;
+$Neutrals400: #d9dbe9;
+$Neutrals300: #eff0f6;
+$Neutrals200: #f7f7fb;
+$Neutrals100: #ffffff;
+
+$SemanticSuccess: #88e05f;
+$SemanticSuccessBG: #effbe9;
+$SemanticDanger: #fd2727;
+$SemanticDangerBG: #f6d4d4;
+$SemanticWarning: #ff9538;
+$SemanticWarningBG: #fadec5;
+
+@mixin laptop {
+  @media screen and (max-width: $laptop) {
+    @content;
+  }
+}
+
+@mixin table {
+  @media screen and (max-width: $table) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin mediumMobile {
+  @media screen and (max-width: $mediumMobile) {
+    @content;
+  }
+}
+
+@mixin smallMobile {
+  @media screen and (max-width: $smallMobile) {
+    @content;
+  }
+}

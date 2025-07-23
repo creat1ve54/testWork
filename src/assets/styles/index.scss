@@ -1,0 +1,361 @@
+@use 'fonts';
+@use 'reset';
+@use 'vue-final-modal/style.css';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $FFDMSans;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: $BaseBlueBG;
+}
+
+.content > div {
+  display: flex;
+  min-height: 100dvh;
+  flex-direction: column;
+}
+
+h1 {
+  color: $Neutrals800;
+  font-family: $FFDMSans;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 62px;
+}
+
+.h1 {
+  color: $Neutrals800;
+  font-family: $FFDMSans;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 62px;
+}
+
+h2 {
+  color: $Neutrals800;
+  font-family: $FFDMSans;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 46px;
+}
+
+.h2 {
+  color: $Neutrals800;
+  font-family: $FFDMSans;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 46px;
+}
+
+h3 {
+  color: $Neutrals800;
+  font-family: $FFDMSans;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 35px;
+}
+
+.h3 {
+  color: $Neutrals800;
+  font-family: $FFDMSans;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 35px;
+}
+
+h4 {
+  color: $Neutrals800;
+  font-family: $FFDMSans;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 28px;
+}
+
+.h4 {
+  color: $Neutrals800;
+  font-family: $FFDMSans;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 28px;
+}
+
+h5 {
+  color: $Neutrals800;
+  font-family: $FFDMSans;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.h5 {
+  color: $Neutrals800;
+  font-family: $FFDMSans;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+p {
+  color: $Neutrals600;
+  font-family: $FFDMSans;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.p {
+  color: $Neutrals600;
+  font-family: $FFDMSans;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.p-small {
+  color: $Neutrals600;
+  font-family: $FFDMSans;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.p-mini {
+  color: $Neutrals600;
+  font-family: $FFDMSans;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.p-base-bold {
+  color: $Neutrals600;
+  font-family: $FFDMSans;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.p-small-bold {
+  color: $Neutrals600;
+  font-family: $FFDMSans;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.p-mini-bold {
+  color: $Neutrals600;
+  font-family: $FFDMSans;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.link-base {
+  color: $BaseBlue;
+  font-family: $FFDMSans;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.link-small {
+  color: $BaseBlue;
+  font-family: $FFDMSans;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 24px;
+}
+
+.link-mini {
+  color: $BaseBlue;
+  font-family: $FFDMSans;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.btn {
+  cursor: pointer;
+  outline: none;
+  border: none;
+
+  &-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: $FFDMSans;
+
+    &-s {
+      padding: 10px 8px;
+      border-radius: 8px;
+      background-color: $BaseBlue;
+      color: $Neutrals100;
+      border: 1px solid $BaseBlue;
+      transition: all 0.3s ease-in-out;
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          border: 1px solid #2a1cca;
+          background-color: #2a1cca;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+
+      &:active {
+        border: 1px solid #191086;
+        background-color: #191086;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &:disabled {
+        border: 1px solid $Neutrals400;
+        background-color: $Neutrals400;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &-disabled {
+        cursor: default;
+        border: 1px solid $Neutrals400;
+        background-color: $Neutrals400;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+
+    &-l {
+      padding: 14px 16px;
+      border-radius: 8px;
+      background-color: $BaseBlue;
+      color: $Neutrals100;
+      border: 1px solid $BaseBlue;
+      transition: all 0.3s ease-in-out;
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          border: 1px solid #2a1cca;
+          background-color: #2a1cca;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+
+      &:active {
+        border: 1px solid #191086;
+        background-color: #191086;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &:disabled {
+        border: 1px solid $Neutrals400;
+        background-color: $Neutrals400;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &-disabled {
+        cursor: default;
+        border: 1px solid $Neutrals400;
+        background-color: $Neutrals400;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+
+  &-secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-s {
+      padding: 10px 8px;
+      border-radius: 8px;
+      border: 1px solid $BaseBlue;
+      color: $BaseBlue;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &-l {
+      padding: 14px 16px;
+      border-radius: 8px;
+      border: 1px solid $BaseBlue;
+      color: $BaseBlue;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+
+.custom-radio {
+  font-family: $FFDMSans;
+  padding: 5px 16px;
+  border-radius: 100px;
+  background-color: $Neutrals300;
+  color: $Neutrals800;
+  white-space: nowrap;
+  transition: all 0.3s ease-in-out;
+
+  input {
+    display: none;
+  }
+
+  &:has(input:checked) {
+    background-color: $Neutrals600;
+    color: $Neutrals100;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.field {
+  width: 100%;
+  &__title {
+    margin-bottom: 4px;
+  }
+
+  input {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 8px;
+    background-color: $Neutrals200;
+    border: 1px solid $Neutrals200;
+    transition: all 0.3s ease-in-out;
+
+    &::placeholder {
+      font-family: $FFDMSans;
+      color: $Neutrals500;
+    }
+  }
+
+  textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 8px;
+    background-color: $Neutrals200;
+    border: 1px solid $Neutrals200;
+    transition: all 0.3s ease-in-out;
+    min-height: 144px;
+    &::placeholder {
+      font-family: $FFDMSans;
+      color: $Neutrals500;
+    }
+  }
+
+  &--error {
+    input {
+      background-color: $SemanticDangerBG;
+      border: 1px solid $SemanticDanger;
+      transition: all 0.3s ease-in-out;
+
+      &::placeholder {
+        color: $SemanticDanger;
+      }
+    }
+  }
+}
